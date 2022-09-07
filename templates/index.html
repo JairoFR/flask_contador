@@ -1,0 +1,32 @@
+{% extends "/base.html" %}
+{% block titulo %}{% endblock %}
+
+
+
+{% block contenido %}
+
+
+<div class="container text-center mt-5">
+    <header class="jumbotron">
+        <h1>Contador</h1>
+        
+    </header>
+    
+    <p>{{session['visitas']}}</p>
+    <form action="/masdos" method="POST" class="col-sm-12 mb-2">
+        <button  value= 1 name="1" class="btn btn-outline-primary">+ 2</button>
+    </form>
+</div>
+<section class="container">
+    <div class="row" >    
+        <form action="/click" method="POST" class="col-sm-6 d-flex justify-content-end">
+                <button  value= 1 name="1" class="btn btn-outline-primary">Click</button>
+        </form>
+        <form action="/restar" class="col-sm-6">
+                <button  class="btn btn-outline-secondary">Reset</button>
+        </form>
+    </div>
+</section>
+
+
+{% endblock %}
